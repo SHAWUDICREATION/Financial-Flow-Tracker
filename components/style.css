@@ -1,0 +1,418 @@
+* {
+    margin :0 ;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    scroll-behavior:smooth;
+    font-family:'poppins' , sans-serif;
+}
+
+:root{
+    --bg-color:#0f1e3a;
+    --text-color: #fff;
+}
+
+html{
+    font-size: 92.5%;
+    overflow-x: hidden; 
+}
+
+body{
+    background:var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* HEADING TEXT SECTION*/
+
+ .logo{
+    display: block;
+    font-size: 3.5rem;
+    color:var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    text-decoration:none;
+    text-align: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.head h4 {
+  margin: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  color: coral;
+}
+
+.head p{
+  text-align:center;
+  font-size: 2rem;
+  font-family:cursive;
+  margin-bottom: 2rem;
+  margin: 3rem;
+}
+
+/* BALANCE & BUTTON SECTION*/
+
+.expense-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.balance {
+  display: flex;
+  gap: 20px;
+}
+
+.balance div {
+  background-color: #9f9eec;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.balance h5 {
+  font-size: 1.5rem;
+}
+
+.balance span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggle-income-form {
+  background-color: #18bd20;
+}
+
+#toggle-expense-form {
+  background-color: #f03413;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+
+/* FORM SECTION*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.add-item {
+  background-color: #9f9eec;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 50rem;
+  width: 100%;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-box label {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.input-box select,
+.input-box input[type="date"],
+.input-box input[type="number"],
+.input-box textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.input-box button {
+  padding: 20px;
+  background-color: #3541e6;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-box button:hover {
+  background-color: #0f23d3;
+}
+
+
+/* TABLE SECTION*/
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column(2,1fr);
+  gap: 30px;
+  max-width: 100%;
+  justify-content: center;
+  margin: 4rem ;
+  margin-bottom: 6rem;
+
+}
+
+.table-wrapper {
+  width:50%;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  background-color: #000000;
+  border: 2px solid #8e8dac;
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+td {
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td.description,
+td.income-description {
+  max-width: 90px;
+}
+
+td.description:hover,
+td.income-description:hover {
+  overflow: visible;
+  cursor: pointer; 
+}
+
+
+.edit-btn,
+.delete-btn {
+  font-size: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.edit-btn {
+  color: #2c50ee;
+}
+
+.delete-btn {
+  color: #f44336;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* FOOTER SECTION */
+.footer {
+  background-color: #0528eb; 
+  padding: 15px 0; 
+  text-align: center;
+  position: fixed; 
+  width: 100%; 
+  bottom: 0; 
+  border-top: 1px solid #e7e7e7; 
+
+}
+
+.footer-content {
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.footer p {
+  color: #ffffff; 
+  margin: 0;
+  font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN SECTION */
+@media (max-width: 768px) {
+  .table-container {
+    flex-direction: column;
+  }
+
+  .table-wrapper {
+    width: 100%;
+  }
+}
+ 
+@media (max-width: 412px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  h2{
+    text-align: center;
+    justify-content: center;
+  }
+
+  table{
+    margin: 2rem;
+  }
+
+  thead tr {
+    display: none;
+ 
+  }
+  
+  tbody tr {
+    margin-bottom: 15px;
+    max-width: 350px;
+  }
+  
+  tbody td {
+    text-align: center;
+    position: relative;
+  }
+  
+  tbody td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+  }
+  
+  .balance span {
+    margin-bottom: 10px;
+    width: 100%; 
+    text-align: center;
+  }
+
+  .logo {
+    font-size:2rem;
+    font-weight: 400;
+  }
+
+  .head h4 {
+  font-size: 1.5rem;
+  }
+
+  .head p{
+  font-size: 1.5rem;
+  margin: 1rem;
+  }
+}
+
+
+/* COLOR MAP SECTION */
+tbody tr.Utilities {
+  background-color: violet;
+}
+
+tbody tr.Clothings {
+  background-color: fuchsia;
+}
+
+tbody tr.Healthcare {
+  background-color: #f36584;
+}
+
+tbody tr.Education {
+  background-color: mediumpurple;
+}
+
+tbody tr.Travel {
+  background-color: lightpink;
+}
+
+tbody tr.Gifts-\&-Donations {
+  background-color: #ac14f3;
+}
+
+tbody tr.Home-Maintenance {
+  background-color: yellow;
+}
+
+tbody tr.Insurance {
+  background-color: tomato;
+}
+
+tbody tr.Savings {
+  background-color: #6ebff5;
+}
+
+tbody tr.Salary{
+  background-color: #41f13b;
+}
+
+tbody tr.Business {
+  background-color: #42e285;
+}
+
+tbody tr.Investment {
+  background-color: #20b2aa;
+}
+
+tbody tr.Other {
+  background-color: #479116;
+}

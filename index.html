@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="components/style.css">
+    <title>My Financial Flow Tracker</title>
+
+</head>
+<body>
+
+<!-- HEADING TEXT SECTION-->
+    <div class="logo">Financial Flow Tracker</div>
+    <section class="head" id="head">
+        <h4>Welcome to Your Financial Management Hub!</h4>
+        <p>Easily track your income and expenses with our intuitive Financial Flow Tracker. Take control of your finances, make informed decisions, and achieve financial peace of mind.</p>
+    </section>
+
+
+<!--BALANCE & BUTTON SECTION-->
+    <section class="expense-tracker">
+        <div class="balance" id="balance"> 
+            <div>
+                <h5>Income</h5>
+                <span id="income">$0.00</span>
+            </div>
+            <div>
+                <h5>Expense</h5>
+                <span id="expense">$0.00</span>
+            </div>
+            <div>
+                <h5>Total Balance</h5>
+                <span id="total-balance">$0.00</span>
+            </div>
+        </div>
+    
+        <div class="buttons">
+            <button id="toggle-income-form">Add Income</button>
+            <button id="toggle-expense-form">Add Expense</button>
+        </div>
+
+<!--FORM SECTION-->    
+        <div class="form-container">
+            <div class="add-item" id="add-income-form" style="display: none;">
+                <form>
+                    <div class="input-box">
+                        <label for="income-category-select">Category:</label>
+                        <select id="income-category-select">
+                            <option disabled selected value="">Select Category</option>
+                            <option value="Salary">Salary</option>
+                            <option value="Business">Business</option>
+                            <option value="Investment">Investment</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label for="income-date-input">Date:</label>
+                        <input type="date" id="income-date-input" placeholder="Date">
+                        <label for="income-amount-input">Amount:</label>
+                        <input type="number" placeholder="Amount" id="income-amount-input">
+                        <label for="income-description-input">Description:</label>
+                        <textarea placeholder="Description" id="income-description"></textarea>
+                        <button type="button" id="add-income-btn">Add Income</button>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="add-item" id="add-expense-form" style="display: none;">
+                <form>
+                    <div class="input-box">
+                        <label for="expense-category-select">Category:</label>
+                        <select id="expense-category-select">
+                            <option disabled selected value="">Select Category</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Clothings">Clothing</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Education">Education</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Gifts-&-Donations">Gifts & Donations</option>
+                            <option value="Home-Maintenance">Home Maintenance</option>
+                            <option value="Insurance">Insurance</option>
+                            <option value="Savings">Savings</option>
+                        </select>
+                        <label for="date-input">Date:</label>
+                        <input type="date" id="date-input" placeholder="Date">
+                        <label for="amount-input">Amount:</label>
+                        <input type="number" placeholder="Amount" id="amount-input">
+                        <label for="description">Description:</label>
+                        <textarea placeholder="Description" id="description"></textarea>
+                        <button type="button" id="add-expense-btn">Add Expense</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+<!--TABLE SECTION-->
+    <div class="table-container">
+        <div class="table-wrapper">
+            <h2>Income List</h2>
+            <table id="income-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="income-table-body"></tbody>
+                
+            </table>
+        </div>
+        <div class="table-wrapper">
+            <h2>Expense List</h2>
+            <table id="expense-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+<!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 My Financial Flow Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+<!-- link script file -->   
+    <script src="components/script.js"></script>
+
+<!--SCROLL REVEAL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '80px',
+            duration: 3000,
+            delay: 300
+        });
+
+        ScrollReveal().reveal('.table-wrapper', { origin: 'bottom' });
+        ScrollReveal().reveal('.head', { origin: 'left' });
+        ScrollReveal().reveal('.buttons', { origin: 'right' });
+    </script>
+</body>
+</html>
